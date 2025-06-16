@@ -1,0 +1,29 @@
+diff --git a/node_modules/react-native-picker/android/build.gradle b/node_modules/react-native-picker/android/build.gradle
+index 40f4f26..931bc7d 100644
+--- a/node_modules/react-native-picker/android/build.gradle
++++ b/node_modules/react-native-picker/android/build.gradle
+@@ -1,8 +1,9 @@
++
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 27
+-    buildToolsVersion "23.0.1"
++    compileSdkVersion 34
++    // buildToolsVersion "23.0.1"
+ 
+     defaultConfig {
+         minSdkVersion 16
+@@ -22,6 +23,10 @@ android {
+ }
+ 
+ dependencies {
+-    compile fileTree(include: ['*.jar'], dir: 'libs')
+-    compile 'com.facebook.react:react-native:+'
++    // compile fileTree(include: ['*.jar'], dir: 'libs')
++    // compile 'com.facebook.react:react-native:+'
++
++
++    implementation fileTree( dir:'libs' ,include:['*.jar'])
++    implementation 'com.facebook.react:react-native:+'
+ }
